@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>WebClient</title>
+	</head>
+	<body onload="load()">
+		<script type="text/javascript" src="js/broadway/sylvester.js"></script>
+		<script type="text/javascript" src="js/broadway/glUtils.js"></script>
+		<script type="text/javascript" src="js/broadway/util.js"></script>
+		<script type="text/javascript" src="js/broadway/avc-codec.js"></script>
+		<script type="text/javascript" src="js/broadway/avc.js"></script>
+		<script type="text/javascript" src="js/broadway/canvas.js" ></script>
+		<script type="text/javascript" src="js/wsavc/wsavc.js"></script>
+		
+		<button type="button" onclick="wsavc.playStream()">Start Video</button>
+		<button type="button" onclick="wsavc.stopStream()">Stop Video</button>
+		<button type="button" onclick="wsavc.playNAL()">Next Frame</button>
+		<button type="button" onclick="wsavc.flush()">Flush Buffer</button>
+		<button type="button" onclick="wsavc.disconnect()">Disconnect</button>
+		<button type="button" onclick="load()">Reload WSAvc</button>
+		<br>
+
+		<script type="text/javascript">
+			//var ip = "10.154.133.56";
+			var ip = "localhost";
+			var port = "8082";
+			var canvas = document.createElement("canvas");
+			canvas.width = 640;
+			canvas.height = 360;
+			document.body.appendChild(canvas);
+			// Create h264 player
+			var uri = "ws://" + ip + ":" + port + "/media/mozilla.264";
+			var wsavc;
+			
+			function load() {
+				wsavc = new WSAvcPlayer(canvas, "webgl", 1, 35);
+				wsavc.connect(uri);
+			}
+		</script>
+	</body>
+</html>

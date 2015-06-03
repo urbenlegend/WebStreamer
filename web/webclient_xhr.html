@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>WebClient</title>
+	</head>
+	<body onload="load()">
+		<script type="text/javascript" src="js/sylvester.js"></script>
+		<script type="text/javascript" src="js/glUtils.js"></script>
+		<script type="text/javascript" src="js/util.js"></script>
+		<script type="text/javascript" src="js/avc-codec.js"></script>
+		<script type="text/javascript" src="js/avc.js"></script>
+		<script type="text/javascript" src="js/canvas.js"></script>
+		<script type="text/javascript" src="js/nalstreamer.js"></script>
+		<script type="text/javascript" src="js/xhravc.js"></script>
+	  
+		<script type="text/javascript">
+			// Create canvas
+			var canvas = document.createElement("canvas");
+			canvas.width = 1680;
+			canvas.height = 1050;
+			document.body.appendChild(canvas);
+			// Create h264 player
+			var xhravc = new XHRAvcPlayer(canvas, "webgl", 100);
+			xhravc.connect("media/scc_qp32.264");
+		</script>	
+	</body>
+</html>

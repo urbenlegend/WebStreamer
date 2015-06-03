@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WSStreamer", "WSStreamer.vcproj", "{AC9D73E5-0F40-41D8-B3F5-9D113413BA50}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1C0FD04E-5ACA-4031-B3D1-320A5360C9D0} = {1C0FD04E-5ACA-4031-B3D1-320A5360C9D0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "websocketpp", "..\..\..\websocketpp\windows\vcpp2008\websocketpp.vcproj", "{1C0FD04E-5ACA-4031-B3D1-320A5360C9D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC9D73E5-0F40-41D8-B3F5-9D113413BA50}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AC9D73E5-0F40-41D8-B3F5-9D113413BA50}.Debug|Win32.Build.0 = Debug|Win32
+		{AC9D73E5-0F40-41D8-B3F5-9D113413BA50}.Release|Win32.ActiveCfg = Release|Win32
+		{AC9D73E5-0F40-41D8-B3F5-9D113413BA50}.Release|Win32.Build.0 = Release|Win32
+		{1C0FD04E-5ACA-4031-B3D1-320A5360C9D0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1C0FD04E-5ACA-4031-B3D1-320A5360C9D0}.Debug|Win32.Build.0 = Debug|Win32
+		{1C0FD04E-5ACA-4031-B3D1-320A5360C9D0}.Release|Win32.ActiveCfg = Release|Win32
+		{1C0FD04E-5ACA-4031-B3D1-320A5360C9D0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>WebClient</title>
+	</head>
+	<body onload="load()">
+		<input type="text" id="textbox"/>
+		<button type="button" onclick="send()">Send</button>
+
+		<script type="text/javascript">
+			var ws;
+			function load() {
+				// Create WebSocket and specify URL
+				ws = new WebSocket("ws://localhost:9002/resource");
+
+				// Specify the binary message type. Can be a Javascript arraybuffer or a blob
+				ws.binaryType = "arraybuffer";
+
+				ws.onopen = function() {
+					// Do stuff that you need to do when the connection opens
+					console.log("Connection opened!")
+				};
+
+				ws.onmessage = function(evt) {
+					// This function callback is called when we receive a message from the server
+					if (evt.data instanceof ArrayBuffer) {
+						doBinaryStuff(evt.data);
+					}
+					else if (typeof evt.data === "string") {
+						document.body.innerHTML = document.body.innerHTML + "<br>" + evt.data;
+					}
+				};
+
+				ws.onclose = function()	{ 
+					// Do stuff that you need to do to tear down the connection
+					console.log("Connection closed!")
+				};
+			}
+			function send() {
+				var textbox = document.getElementById("textbox");
+				ws.send(textbox.value);
+			}
+		</script>
+	</body>
+</html>

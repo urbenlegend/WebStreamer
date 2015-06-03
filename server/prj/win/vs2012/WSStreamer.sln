@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WSStreamer", "WSStreamer.vcxproj", "{71E3B037-35EB-48F4-B169-DF156AB3E27C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1C0FD04E-5ACA-4031-B3D1-320A5360C9D0} = {1C0FD04E-5ACA-4031-B3D1-320A5360C9D0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "websocketpp", "..\..\..\websocketpp\windows\vcpp2010\websocketpp.vcxproj", "{1C0FD04E-5ACA-4031-B3D1-320A5360C9D0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rtpdump", "..\rtpdump\rtpdump.vcxproj", "{8EA8B869-134B-4912-A98C-76F3E843D9EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71E3B037-35EB-48F4-B169-DF156AB3E27C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{71E3B037-35EB-48F4-B169-DF156AB3E27C}.Debug|Win32.Build.0 = Debug|Win32
+		{71E3B037-35EB-48F4-B169-DF156AB3E27C}.Release|Win32.ActiveCfg = Release|Win32
+		{71E3B037-35EB-48F4-B169-DF156AB3E27C}.Release|Win32.Build.0 = Release|Win32
+		{1C0FD04E-5ACA-4031-B3D1-320A5360C9D0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1C0FD04E-5ACA-4031-B3D1-320A5360C9D0}.Debug|Win32.Build.0 = Debug|Win32
+		{1C0FD04E-5ACA-4031-B3D1-320A5360C9D0}.Release|Win32.ActiveCfg = Release|Win32
+		{1C0FD04E-5ACA-4031-B3D1-320A5360C9D0}.Release|Win32.Build.0 = Release|Win32
+		{8EA8B869-134B-4912-A98C-76F3E843D9EB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8EA8B869-134B-4912-A98C-76F3E843D9EB}.Debug|Win32.Build.0 = Debug|Win32
+		{8EA8B869-134B-4912-A98C-76F3E843D9EB}.Release|Win32.ActiveCfg = Release|Win32
+		{8EA8B869-134B-4912-A98C-76F3E843D9EB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
